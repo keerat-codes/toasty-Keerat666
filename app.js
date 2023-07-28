@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const CoolFactsRoute = require('./routes/CoolFacts');
+const IntrestingFacts  = require('./controllers/IntrestingFacts');
+app.use('/giveMeFacts', IntrestingFacts);
 app.use('/CoolFacts', CoolFactsRoute);
 app.use(cors())
 app.use(express.json());
